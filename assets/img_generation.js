@@ -1,7 +1,7 @@
 const fs = require('fs')
 const path = require('path')
 
-const baseDir = './images_resized'
+const baseDir = 'images_resized'
 const sizes = [100, 200, 400, 800, 1600]
 const formats = ['webp', 'jpg']
 const outputFilePath = 'generated-pictures.html'
@@ -9,7 +9,7 @@ const outputFilePath = 'generated-pictures.html'
 function generateSrcSet(relativePath, format) {
     return sizes
         .map((size) => {
-            return `./${baseDir}/${size}/${relativePath}.${format} ${size}w`
+            return `./assets/${baseDir}/${size}/${relativePath}.${format} ${size}w`
         })
         .join(',\n      ')
 }

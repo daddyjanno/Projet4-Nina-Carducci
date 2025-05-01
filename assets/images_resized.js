@@ -5,7 +5,7 @@ const path = require('path')
 const inputRoot = './images' // Dossier contenant les images WebP
 const outputRoot = './images_resized' // Dossier de sortie
 const sizes = [100, 200, 400, 800, 1600]
-const formats = ['jpg', 'png'] // Formats à générer
+const formats = ['jpg', 'png', 'webp'] // Formats à générer
 
 // Fonction récursive pour parcourir tous les sous-dossiers
 function processDirectory(dir) {
