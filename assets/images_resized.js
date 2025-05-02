@@ -7,7 +7,6 @@ const outputRoot = './images_resized' // dossier de sortie
 const sizes = [400, 800]
 const formats = ['webp'] // formats à générer
 
-// Fonction récursive pour parcourir les sous-dossiers
 function processDirectory(dir) {
     fs.readdirSync(dir, { withFileTypes: true }).forEach((entry) => {
         const fullPath = path.join(dir, entry.name)
