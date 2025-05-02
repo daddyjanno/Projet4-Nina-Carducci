@@ -2,18 +2,18 @@ const sharp = require('sharp')
 const fs = require('fs')
 const path = require('path')
 
-const inputRoot = './images' // Dossier contenant les images WebP
-const outputRoot = './images_resized' // Dossier de sortie
-const sizes = [100, 200, 400, 800, 1600]
-const formats = ['jpg', 'png', 'webp'] // Formats à générer
+const inputRoot = './images' // dossier d'origine
+const outputRoot = './images_resized' // dossier de sortie
+const sizes = [400, 800]
+const formats = ['webp'] // formats à générer
 
-// Fonction récursive pour parcourir tous les sous-dossiers
+// Fonction récursive pour parcourir les sous-dossiers
 function processDirectory(dir) {
     fs.readdirSync(dir, { withFileTypes: true }).forEach((entry) => {
         const fullPath = path.join(dir, entry.name)
 
         if (entry.isDirectory()) {
-            processDirectory(fullPath) // appel récursif
+            processDirectory(fullPath)
         } else {
             const ext = path.extname(entry.name).toLowerCase()
             const validInput = ['.webp', '.jpg', '.jpeg', '.png']
@@ -21,19 +21,15 @@ function processDirectory(dir) {
             if (!validInput.includes(ext)) return
 
             const relativePath = path.relative(inputRoot, fullPath)
-            const baseName = path.parse(relativePath).name // sans extension
+            const baseName = path.parse(relativePath).name
             const subDir = path.dirname(relativePath)
 
-            sizes.forEach((size) => {
-                formats.forEach((format) => {
-                    const outputPath = path.join(
-                        outputRoot,
-                        size.toString(),
-                        subDir
-                    )
+            formats.forEach((format) => {
+                sizes.forEach((size) => {
+                    const outputPath = path.join(outputRoot, subDir)
                     const outputFile = path.join(
                         outputPath,
-                        `${baseName}.${format}`
+                        `${baseName}-${size}w.${format}`
                     )
 
                     fs.mkdirSync(outputPath, { recursive: true })
