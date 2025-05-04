@@ -203,7 +203,7 @@ body {
 }
 .picture.right::before {
     content: ' ';
-    background-color: #645307;
+    background-color: #beb45a;
     width: 374px;
     height: 329px;
     position: absolute;
