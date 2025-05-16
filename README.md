@@ -43,6 +43,19 @@ Audit et optimisation de performances, accessibilité et SEO du site de la photo
 Le front-end sera lancé à l'URL:
 `http://127.0.0.1:8080/`
 
+### Lancement du script deconversion des images:
+
+1. Aller dans le dossier "assets":
+
+-   `cd assets\`
+
+2. Lancer le script:
+
+-   `node images_resized.js`
+
+Les images transformées sont automatiquement envoyées vers le dossier `images-resized`, en gardant l'arborescence interne du dossier.
+
+
 ## Structure du Projet
 
 -   `index.html` : Page principale du site
