@@ -27,30 +27,16 @@ Audit et optimisation de performances, accessibilité et SEO du site de la photo
 1. Clonez le dépôt :
 
     ```bash
-    git clone git@github.com:OpenClassrooms-Student-Center/Nina-Carducci-Dev.git
+    git clone git@github.com:daddyjanno/Projet4-Nina-Carducci.git
     ```
 
-### Installation et lancement du Back-end :
+### Installation et lancement:
 
-1. Aller dans le dossier "Backend"
-
-2. Installer toutes les dépendances pour le back-end:
+1. Installer toutes les dépendances:
 
 -   `npm install`
 
-3. Lancer le back-end (port 3001 par défaut):
-
--   `npm start`
-
-### Installation et lancement du front-end :
-
-1. Aller dans le dossier "Frontend"
-
-2. Installer toutes les dépendances pour le front-end:
-
--   `npm install`
-
-3. Lancer le front-end:
+2. Lancer le front-end:
 
 -   `live-server`
 
@@ -60,15 +46,19 @@ Le front-end sera lancé à l'URL:
 ## Structure du Projet
 
 -   `index.html` : Page principale du site
--   `login.html` : Page du formulaire de connection
--   `src/`: Dossier contenant les différentes ressources nécessaires au fonctionnement du site:
+-   `assets`: Dossier contenant les différentes ressources nécessaires au fonctionnement du site:    
+    -   `bootstrap/`: dossier contenant les librairies Bootstrap
+    -   `css/`: Dossier contenant les styles CSS des différents layout et composants
+    -   `images/` : Dossier contenant les images originales du site.
+    -   `images-resized/` : Dossier contenant les images transformées grâce au script.
+    -   `images-resizer.js` : script javascript pour la transformation des images du sites, afin de s'adapter aux conditions d'affichage
+    -   `maugallery.js`: fichier contenant la logique jquery pour la gestion de la galerie et de la modale d'affichage des images
+    -   `scripts.js`: fichier contenant la logique jquery pour l'adaptation responsive de la galerie 
     -   `style.css`: Fichier centralisant tous les imports de ressources css
-    -   `css/`: Dossier contenant les styles CSS des différents layout et composants, ainsi que style.css
-    -   `index.js`: fichier contenant la logique javascript pour la page principale
-    -   `login.js`: fichier contenant la logique javascript de la page de connection
-    -   `js/` : Dossier contenant les fichiers javascript
--   `maquettes/` : Dossier contenant la maquette découpé pour initier la structure du fichier `index.html`.
--   `assets` : Dossier contenant les images du site ainsi que les icones.
+-   `rapports` : Dossier contenant les différents rapports d'optimisation.
+
+## Apercu
+Le site est déployé et accessible à l'adresse suivante : [Nina Carducci](https://daddyjanno.github.io/Projet4-Nina-Carducci/)
 
 ## Développé avec :
 
