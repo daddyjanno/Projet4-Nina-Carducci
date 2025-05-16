@@ -4,7 +4,7 @@ const path = require('path')
 
 const inputRoot = './images' // dossier d'origine
 const outputRoot = './images_resized' // dossier de sortie
-const sizes = [400, 800]
+const sizes = [400, 800] // tailles cibles des images qui seront générées
 const formats = ['webp'] // formats à générer
 
 function processDirectory(dir) {
