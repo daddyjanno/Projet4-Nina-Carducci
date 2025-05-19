@@ -153,6 +153,9 @@
                     }
                 })
             }
+
+            // modifications ici pour réparer la modale
+
             let index = 0
 
             $(imagesCollection).each(function (i) {
@@ -223,6 +226,8 @@
                 </div>
             </div>`)
         },
+
+        // modifications pour catégories
         showItemTags(gallery, position, tags) {
             var tagItems =
                 '<li class="nav-item"><span class="nav-link active active-tag"  data-images-toggle="all">Tous</span></li>'
