@@ -51,7 +51,7 @@ Le front-end sera lancé à l'URL:
 
 2. Lancer le script:
 
--   `node images_resized.js`
+-   `node images_resizer.js`
 
 Les images transformées sont automatiquement envoyées vers le dossier `images-resized`, en gardant l'arborescence interne du dossier.
 
